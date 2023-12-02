@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "es2015",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "NodeNext"
+  }
+}

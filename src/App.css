@@ -1,0 +1,25 @@
+.drawflow-node {
+    background-color: white !important;
+}
+
+.output-area {
+    height: 100vh;
+    padding-top: 16px;
+}
+
+.id-input {
+    width: 320px;
+}
+
+
+.member {
+    background-color: rgb(177, 214, 177) !important;
+}
+
+.publication {
+    background-color: lightblue !important;
+}
+
+.subscription {
+    background-color: lightcoral !important;
+}

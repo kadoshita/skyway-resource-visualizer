@@ -29,12 +29,16 @@ export function App() {
         const channelId = channelIdInputElement.current?.value;
         const channelName = channelNameInputElement.current?.value;
 
-        if (!appId || appId === '') {
-            throw new Error('App ID is required.');
-        }
-
-        if (!secretKey && !skywayAuthToken) {
-            throw new Error('Either Secret Key or SkyWay Auth Token is required.');
+        // 基本的にはSkyWay Auth Tokenを使うので、SkyWay Auth Tokenが未入力の場合をチェック
+        if (!skywayAuthToken || skywayAuthToken === '') {
+            // App IDが未入力の場合
+            if (!appId || appId === '') {
+                throw new Error('App ID is required.');
+            }
+            // Secret Keyが未入力の場合
+            if (!secretKey || secretKey === '') {
+                throw new Error('Secret Key is required.');
+            }
         }
 
         if (!channelId && !channelName) {
